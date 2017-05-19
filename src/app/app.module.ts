@@ -7,7 +7,6 @@ import { IonicPWA } from './app.component';
 
 import { IonicStorageModule } from '@ionic/storage';
 import { StorageService } from '../providers/storage-service';
-import { CurrencyService } from '../providers/currency-service';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,6 +28,6 @@ import { StatusBar } from '@ionic-native/status-bar';
   providers: [
     SplashScreen,
     StatusBar,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, StorageService, CurrencyService]
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, StorageService]
 })
 export class AppModule {}

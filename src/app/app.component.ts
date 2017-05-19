@@ -3,8 +3,6 @@ import { Platform } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { CurrencyService } from '../providers/currency-service';
-
 declare var Notification: any;
 
 @Component({
@@ -16,8 +14,7 @@ export class IonicPWA {
   constructor(
     platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
-    currency: CurrencyService
+    private statusBar: StatusBar
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -36,8 +33,5 @@ export class IonicPWA {
         return;
       }
     });
-
-    // load intital data for the application
-    //currency.loadCurrencyList("USD");
   }
 }
