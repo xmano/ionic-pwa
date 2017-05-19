@@ -1,2 +1,2 @@
 # ionic-pwa
-PWA created using Ionic 3
+Starter PWA created using Ionic 3
